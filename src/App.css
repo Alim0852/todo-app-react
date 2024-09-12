@@ -1,0 +1,162 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Heading */
+h1 {
+  font-size: 2.5em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form */
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Todo List */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.1em;
+  flex: 1;
+}
+
+button {
+  border: none;
+  font-size: 0.9em;
+  cursor: pointer;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Edit Button */
+button.edit {
+  background-color: #28a745;
+  color: #fff;
+}
+
+button.edit:hover {
+  background-color: #218838;
+}
+
+/* Delete Button */
+button.delete {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+button.delete:hover {
+  background-color: #c82333;
+}
+/* Heading */
+h1 {
+  font-size: 2.5em; /* Adjust font size for better visibility */
+  color: #333; /* Base color */
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700; /* Bold text */
+  position: relative; /* For pseudo-element positioning */
+  padding: 10px; /* Add padding for spacing */
+}
+
+/* Gradient Text Effect */
+h1::before {
+  content: ''; /* Empty content for pseudo-element */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to right, #007bff, #00d084); /* Gradient color */
+  z-index: -1; /* Place behind text */
+  transform: translateY(-50%); /* Center vertically */
+}
+
+/* Text Shadow */
+h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+/* Add Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+h1 {
+  background: linear-gradient(90deg, #007bff, #00d084, #007bff);
+  background-size: 200% 200%;
+  animation: gradientAnimation 3s ease infinite; /* Animated gradient */
+  -webkit-background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; /* Make text color transparent */
+}
